@@ -1,4 +1,6 @@
-table! {
+// @generated automatically by Diesel CLI.
+
+diesel::table! {
     messages (id) {
         id -> Int4,
         username -> Varchar,
@@ -6,4 +8,3 @@ table! {
         timestamp -> Int8,
     }
 }
-

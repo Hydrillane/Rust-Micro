@@ -1,0 +1,4 @@
+FROM postgres
+# MAINTAINER billy
+
+ADD schemas/messages.sql /docker-entrypoint-initdb.d/

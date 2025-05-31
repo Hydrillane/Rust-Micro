@@ -1,15 +1,16 @@
-use serde;
-#[derive(Queryable,Serialize,Debug)]
+use crate::schema::messages;
+
+#[derive(Queryable, Serialize, Debug)]
 pub struct Message {
     pub id: i32,
-    pub username : String,
-    pub message : String,
-    pub timestamp : i64,
+    pub username: String,
+    pub message: String,
+    pub timestamp: i64,
 }
 
-#[derive(Insertable,Debug)]
+#[derive(Insertable, Debug)]
 #[table_name = "messages"]
-pub struct NewMessages {
-    pub username : String,
+pub struct NewMessage {
+    pub username: String,
     pub message: String,
 }
